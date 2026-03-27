@@ -1,0 +1,1252 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Muli";
+}
+
+@font-face {
+  font-family: "Muli-Bold";
+  src:
+    url("../fonts/Muli-Bold.woff2") format("woff2"),
+    url("../fonts/Muli-Bold.woff") format("woff"),
+    url("../fonts/Muli-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src:
+    url("../fonts/Muli.woff2") format("woff2"),
+    url("../fonts/Muli.woff") format("woff"),
+    url("../fonts/Muli.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli-Light";
+  src:
+    url("../fonts/Muli-Light.woff2") format("woff2"),
+    url("../fonts/Muli-Light.woff") format("woff"),
+    url("../fonts/Muli-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli-SemiBold";
+  src:
+    url("../fonts/Muli-SemiBold.woff2") format("woff2"),
+    url("../fonts/Muli-SemiBold.woff") format("woff"),
+    url("../fonts/Muli-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli-Extra-Bold";
+  src:
+    local("Muli Extra Bold"),
+    local("Muli-Extra-Bold"),
+    url("../fonts/Muli-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Muli-ExtraBold.woff") format("woff"),
+    url("../fonts/Muli-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+.az-case-studies-home-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Navigation Dots */
+.dots-container {
+  position: absolute;
+  bottom: 0px;
+  left: 55%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #fff;
+  width: 45px;
+  border-radius: 10px;
+}
+
+.case-bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity var(--bg-transition);
+  opacity: 1;
+}
+
+.az-bg-repeate {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.vl-border-radius {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.az-fintech-nav-tabs {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0 !important;
+}
+
+.az-fintech-nav-item {
+  position: relative;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ffffff59;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.az-fintech-nav-item:has(.nav-link.active) {
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.az-fintech-nav-item img {
+  width: 12px;
+}
+
+.az-fintech-types-tab-section {
+  height: 450px;
+  border: 1px solid #c5c5c599;
+  padding: 20px 10px 20px 20px;
+  border-radius: 12px;
+  border-left: none;
+  scrollbar-gutter: stable;
+}
+
+.az-fintech-types-tab-inner {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 8px;
+}
+
+.az-fintech-types-tab-inner::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 8px;
+}
+
+.az-fintech-types-tab-inner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #e0deef66;
+}
+
+.az-fintech-types-tab-inner::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin-block: 8px;
+}
+
+.az-fintech-types-tab-section::-webkit-scrollbar {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2) !important;
+  width: 6px !important;
+}
+
+.az-fintech-types-tab-section::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #e0deef66 !important;
+  height: 4px !important;
+  background-clip: content-box;
+  border-right: 4px solid transparent;
+}
+
+.az-fintech-types-tab-section::-webkit-scrollbar-track {
+  margin-block: 8px; /* this creates the top and bottom gap from the border */
+  border-radius: 8px;
+  margin-right: 4px;
+  background: transparent;
+}
+
+.az-microsoft-fabric-bg {
+  /* margin-top: -130px; */
+  position: relative;
+}
+
+.az-case-main-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 20px 50px 0 80px;
+}
+
+.az-bg-repate {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.az-main-section-wrapper {
+  display: flex !important;
+  align-items: center;
+  justify-content: start;
+  height: 101vh;
+  padding: 0px !important;
+}
+
+.az-bg-heading-title {
+  font-size: 44px;
+  line-height: 54px;
+  font-family: "Muli-Extra-Bold";
+  margin-bottom: 18px;
+}
+
+.text-warning {
+  color: #f79c2e !important;
+}
+
+.az-bg-sub-heading {
+  font-size: 17px;
+  width: 480px;
+  line-height: 28px;
+  font-family: "Muli-light", sans-serif;
+}
+
+.btn-warnings {
+  background: #f89b2d !important;
+  color: #fff !important;
+  padding: 8px 28px !important;
+  font-size: 18px;
+  font-family: "Muli-SemiBold";
+}
+
+.az-cust-pad {
+  padding: 8px 35px !important;
+}
+
+.az-fabric-about-section {
+  padding: 40px 0;
+}
+
+.az-about-heading h2 {
+  color: #333;
+  font-family: "Muli-SemiBold";
+}
+
+.az-about-desc {
+  color: #666;
+}
+
+.az-about-video-section {
+  border-radius: 10px;
+  border: 10px solid #fff;
+  background: #fff;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.az-video-section-rad {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.az-video-section-rad video {
+  border-radius: 4px;
+  object-fit: cover;
+  height: 100%;
+}
+
+.az-fabric-component-heading h2 {
+  color: #333;
+  font-family: "Muli-Extra-Bold";
+  font-size: 35px;
+}
+
+.vl-mt {
+  margin-bottom: 45px;
+}
+.az-fabric-component-section {
+  background-color: white;
+  padding: 20px 0px;
+}
+
+.az-fabric-component-heading p {
+  color: #333333;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.vl-fabric-component-heading h2 {
+  font-family: "Muli-Bold";
+  font-size: 35px !important;
+  color: #000000;
+}
+
+.vl-sub-heading {
+  color: #3a3a3a;
+}
+
+.az-fabric-component-wrapper {
+  border-radius: 25px;
+  border: 1px solid #76bfb1;
+  background-image: url("../image/offerings-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px 30px;
+  height: 100%;
+}
+
+.vl-fabric-component-wrapper {
+  border-radius: 12px;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px 10px;
+  height: 100%;
+  box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+.az-fabric-component-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-image: url("../image/Ellipse\ 858.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.vl-fabric-component-icon {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.az-fabric-component-sub-head {
+  font-size: 25px;
+  font-family: "Muli-Extra-Bold";
+  color: #333333;
+}
+
+.vl-fabric-component-sub-head {
+  font-size: 25px;
+  font-family: "Muli-Extra-Bold";
+  color: #333333;
+  padding-inline: 15px;
+  text-align: left;
+}
+
+.az-case-left-content {
+  flex: 1;
+  color: #fff;
+  max-width: 440px;
+  z-index: 10;
+}
+
+.az-case-left-content h1 {
+  font-size: 43px;
+  line-height: 52px;
+  font-family: "Muli-Extra-Bold";
+  margin-bottom: 20px;
+}
+
+.az-case-left-content p {
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.az-fabric-component-sub-desc {
+  font-size: 15px;
+  color: #333333;
+}
+
+.vl-fabric-component-sub-desc {
+  font-size: 15px;
+  color: #333333;
+  padding-inline: 15px;
+  text-align: left;
+}
+
+.ms-offer-heading-icon img {
+  width: 55px !important;
+}
+
+.az-fabric-features-section {
+  padding: 30px 0px;
+  /* background-image: url("/assets/image/content-bg.png"); */
+  position: relative;
+  z-index: 0;
+}
+
+.az-fabric-features-section::before {
+  content: "";
+  position: absolute;
+  top: 18%; /* starts from the middle of the div */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../image/content-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+}
+
+.az-fintech-types-section {
+  margin: 40px 0;
+  border-radius: 12px;
+}
+
+.vl-fabric-data-solution {
+  width: 95%;
+  height: 650px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #c7c7f5;
+  border-radius: 15px;
+  padding: 10px 75px;
+}
+
+.vl-margin-top {
+  margin-top: 6%;
+}
+
+.vl-section-1 {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #aabcc2;
+  display: flex;
+  align-items: start;
+  padding: 33px 33px;
+  gap: 20px;
+}
+
+.vl-img {
+  border-radius: 8px;
+  background-color: #f79c2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.vl-img img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.vl-text h4 {
+  font-size: 20px;
+  font-family: "Muli-Extra-Bold";
+  margin: 0;
+}
+
+.vl-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vl-text p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;
+  color: #333333;
+  margin: 4px 0;
+}
+
+.vl-choose-img {
+  border-radius: 16px;
+}
+
+.msq-md-sales-accordion-tabs .accordion-item {
+  /* border: none; */
+  padding: 30px 0;
+  border-top: none;
+  width: 100%;
+  border-right: none;
+  border-left: none !important;
+  background: none;
+}
+
+.msq-md-sales-accordion-tabs .accordion-item .accordion-button {
+  background: none;
+  color: #333;
+  font-size: 18px;
+  font-family: "Muli-SemiBold";
+  box-shadow: none;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.msq-md-sales-accordion-tabs .accordion-item.msq-collapsed {
+  border-left: 2px solid #f79c2e !important;
+  box-shadow: 5px 11px 18px #0000001a !important;
+  position: relative;
+  background-color: #f5f8fc;
+}
+
+.az-accordian-desc {
+  font-family: "Muli";
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.az-fabric-impact-section {
+  background-color: #f6f7fc;
+  padding: 30px 0px;
+}
+
+.az-impact-desc {
+  color: #333;
+}
+
+.ms-plan-list {
+  padding-left: 0 !important;
+}
+
+.ms-plan-list li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "Muli";
+  color: #333;
+}
+
+.az-custom-checklist-2 {
+  color: #f79c2e;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.az-fabric-enquire-section {
+  padding: 30px 0px;
+}
+
+.az-enquire-form-section {
+  border-radius: 4px;
+  background: #f6f7fc;
+  padding: 16px 24px 16px 25px;
+  height: 100%;
+}
+
+.vl-start-button {
+  background-color: #f79c2e;
+  color: white;
+  border-radius: 25px;
+  padding: 7px 15px;
+  border: 1px solid #f79c2e;
+  display: block;
+  margin-top: -4px;
+}
+.az-enquire-heading h3 {
+  font-family: "Muli-SemiBold";
+}
+
+.az-enquire-form-section input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #666666;
+  border-radius: 0px;
+  padding: 10px 0;
+}
+
+.az-enquire-form-section input:focus {
+  background: none;
+  box-shadow: none;
+  border-color: #666666;
+  color: #666666;
+}
+
+.az-forms-wrapper label {
+  color: #333;
+}
+
+.az-fabric-faq-section {
+  background-color: #f6f7fc;
+  padding: 30px 0px;
+}
+
+.vl-first-section {
+  margin-left: 5%;
+}
+
+:root {
+  --marquee-speed: 8s;
+  --gap: 16px;
+  --img-height: 100px;
+}
+
+.az-marquee-fabric {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.az-marquee__track-fabric {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  will-change: transform;
+}
+
+.vl-margin-bottom {
+  margin-bottom: 25%;
+}
+
+.az-marquee__group-fabric {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.mobile-data {
+  display: inline;
+}
+
+.az-marquee__group-fabric .marquee__item-fabric {
+  flex: 0 0 auto;
+  /* height: var(--img-height);
+  aspect-ratio: 6/3; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vl-display-block {
+  display: flex;
+}
+
+.vl-display-none {
+  display: none;
+}
+
+.mobile-break {
+  display: none;
+}
+
+.az-fintech-nav-link {
+  border: 0 !important;
+  margin-bottom: 10px !important;
+  padding: 8px 10px !important;
+  color: #ffffff !important;
+  font-size: 18px;
+  font-family: "Muli-Bold";
+  display: flex;
+  align-items: center;
+}
+
+.az-fintech-nav-link.active {
+  border: 0 !important;
+  color: #ffffffea !important;
+  font-size: 18px;
+  border-radius: 6px;
+  background-color: #f79c2e !important;
+  padding: 8px 10px 10px !important;
+  width: 100%;
+  margin-bottom: 0px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.az-color-img {
+  display: none;
+}
+
+.az-fintech-nav-link.active .az-color-img {
+  display: inline-block;
+}
+
+.az-fintech-nav-link.active .az-grey-img {
+  display: none;
+}
+
+/* Left side animation */
+.az-marquee--left .az-marquee__track-fabric {
+  animation: marquee-left linear infinite;
+  animation-duration: var(--marquee-speed);
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.az-fabric-companies-wrapper {
+  position: absolute;
+  bottom: 0px;
+  z-index: 99;
+  width: 100%;
+  padding: 5px 0px 8px;
+  background-color: #ffffff27;
+}
+
+.az-poc-companies-section img {
+  width: 100%;
+}
+
+.vl-logo img {
+  width: 21%;
+}
+
+.vl-second-section {
+  margin-top: 3%;
+}
+
+/* Sliding Card Area */
+.right-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.slider-inner {
+  display: flex;
+  transition: transform var(--slide-transition);
+  height: 100%;
+}
+.card-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+.glass-card {
+  border: 1px solid #fff;
+  border-radius: 24px;
+  padding: 30px 40px;
+  width: 94%;
+  height: 492px;
+  overflow: hidden;
+  color: #fff;
+}
+.az-bgs-repeate {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.az-slide-main-section h2 {
+  font-size: 36px;
+  line-height: 46px;
+  font-family: "Muli-SemiBold";
+  margin-bottom: 20px;
+}
+
+.az-slide-main-section p {
+  font-size: 20px;
+  line-height: 30px;
+  width: 55%;
+}
+.slider-img-section {
+  width: 130px;
+  margin-bottom: 20px;
+}
+.az-text-warning {
+  color: #f79c2e !important;
+}
+.slide-cardalign-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+.slide-bottom-card {
+  border: 1px solid #ffffff85;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+}
+.slide-bottom-card p {
+  font-size: 15px;
+  width: 100%;
+}
+
+.slide-bottom-card h2 {
+  font-size: 30px;
+  line-height: 28px;
+}
+
+.az-fintech-tab-desc-section h3 {
+  font-size: 24px;
+  font-family: "Muli-SemiBold";
+}
+
+.az-fintech-tab-desc-section img {
+  width: 55px;
+}
+
+.az-fintech-tab-desc-section p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  font-family: "Muli";
+}
+
+.az-fintech-tab-desc-section {
+  padding: 20px 20px 10px 20px;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  line-height: 38px;
+  color: #fff;
+  font-family: "Muli-Extra-Bold";
+}
+
+@media screen and (max-width: 1400px) {
+  .img-text {
+    font-size: 26px;
+    line-height: 35px;
+  }
+  .vl-fabric-component-sub-head {
+    font-size: 22px;
+  }
+  .vl-fabric-component-sub-desc {
+    font-size: 14px;
+  }
+  .az-fintech-tab-desc-section h3 {
+    font-size: 20px;
+  }
+  .az-fintech-tab-desc-section p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .marquee__item-fabric img {
+    width: 130px;
+  }
+  .az-case-left-content {
+    max-width: 350px;
+  }
+  .az-bg-sub-heading {
+    width: 400px;
+  }
+  .slide-bottom-card p {
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+  .slide-bottom-card h2 {
+    font-size: 24px !important;
+    line-height: 20px !important;
+  }
+  .glass-card {
+    padding: 30px 30px;
+    width: 91%;
+    height: 420px;
+  }
+  .az-case-left-content h1 {
+    font-size: 38px;
+    line-height: 47px;
+    font-family: "Muli-Extra-Bold";
+    margin-bottom: 20px;
+  }
+  .slider-img-section {
+    width: 110px;
+    margin-bottom: 20px;
+  }
+  .az-case-left-content p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .az-case-main-wrapper {
+    padding: 0px 35px 0 85px;
+  }
+  .az-bg-heading-title {
+    font-size: 38px;
+    line-height: 54px;
+    font-family: "Muli-SemiBold";
+  }
+  .az-about-desc {
+    font-size: 14px;
+  }
+  .az-fabric-component-wrapper {
+    padding: 20px 20px;
+  }
+  .az-fabric-component-sub-desc {
+    font-size: 13px;
+  }
+  .az-fabric-component-sub-head {
+    font-size: 22px;
+  }
+  .az-accordian-desc {
+    font-size: 14px;
+  }
+  .az-impact-desc {
+    font-size: 14px;
+  }
+  .az-slide-main-section h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .az-slide-main-section p {
+    font-size: 16px;
+    line-height: 26px;
+    width: 52%;
+  }
+  .msq-md-sales-accordion-tabs .accordion-item {
+    padding: 25px 0;
+  }
+  .az-custom-checklist-2 {
+    margin-top: 4px;
+  }
+  .msq-md-sales-accordion-tabs .accordion-item .accordion-button {
+    font-size: 16px;
+  }
+  .az-fabric-component-heading p {
+    font-size: 12px;
+  }
+  .vl-fabric-component-heading h2 {
+    font-size: 32px !important;
+  }
+  .az-fabric-component-heading h2 {
+    font-size: 32px !important;
+  }
+  .vl-section-1 {
+    padding: 22px 21px;
+  }
+  .vl-text p {
+    font-size: 14px;
+  }
+  .vl-first-section {
+    margin-left: 0px;
+  }
+  .vl-display-block {
+    display: flex;
+  }
+  .vl-display-none {
+    display: none;
+  }
+  .mobile-break {
+    display: none;
+  }
+  .mobile-data {
+    display: inline;
+  }
+  .az-fintech-nav-item img {
+    width: 12px;
+  }
+  .az-fintech-nav-link.active {
+    font-size: 15px;
+  }
+  .az-fintech-types-tab-section {
+    height: 462px;
+  }
+  .az-fintech-nav-link {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .az-fabric-features-section::before {
+    background-image: url("../image/content-bg-mobile.png");
+    top: 85%;
+  }
+  .mobile-header {
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .img-box {
+    margin-bottom: 15px;
+  }
+  .img-text {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .vl-fabric-component-wrapper {
+    padding: 20px 20px;
+  }
+  .vl-fabric-component-icon img {
+    width: 40px;
+  }
+  .vl-fabric-component-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .vl-fabric-component-sub-head {
+    font-size: 18px;
+    padding-inline: 0px;
+    text-align: start;
+  }
+  .vl-fabric-component-sub-desc {
+    font-size: 14px;
+    padding-inline: 0px;
+  }
+  .az-fintech-accord-body {
+    color: #bebebe !important;
+    font-size: 15px !important;
+    padding: 0px 15px 15px;
+  }
+  .az-fintech-accord-icon {
+    width: 40px;
+    margin-right: 10px;
+  }
+  .az-fintech-accord-btn {
+    background: rgba(255, 255, 255, 0) !important;
+    color: #ffffffee !important;
+    box-shadow: none !important;
+    padding: 15px 15px !important;
+  }
+  .az-fintech-accord-item {
+    border-radius: 6px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 10px !important;
+    border: none !important;
+  }
+  .accordion-button::after {
+    background-image: none !important;
+    mask-image: var(--bs-accordion-btn-icon);
+    -webkit-mask-image: var(--bs-accordion-btn-icon);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: var(--bs-accordion-btn-icon-width);
+    -webkit-mask-size: var(--bs-accordion-btn-icon-width);
+    background-color: white; /* Set the arrow color */
+  }
+  .az-microsoft-fabric-bg {
+    background-image: url("assets/image/mobile-home-bg.png") !important;
+  }
+  .slide-cardalign-section {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .slide-bottom-card {
+    padding: 8px 15px;
+    border-radius: 8px;
+  }
+  .slide-bottom-card p {
+    font-size: 12px;
+  }
+
+  .az-microsoft-fabric-home {
+    padding: 300px 10px 45px !important;
+    height: auto;
+  }
+
+  .az-bg-heading-title {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-family: "Muli-Extra-Bold";
+  }
+
+  .az-bg-sub-heading {
+    font-size: 17px;
+    line-height: 27px;
+    width: 100%;
+    text-align: center;
+  }
+  .az-fabric-component-heading h2 {
+    font-size: 28px !important;
+  }
+  .az-fabric-component-heading p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .vl-padding-none {
+    padding: 0px !important;
+  }
+  .vl-display-block {
+    display: none;
+  }
+  .vl-display-none {
+    display: block;
+  }
+  .az-fabric-component-icon {
+    background-image: none;
+    height: 40px;
+    width: 40px;
+    margin-inline: 0px;
+  }
+  .az-fabric-component-wrapper {
+    border-radius: 12px;
+    border: 1px solid #76bfb1;
+    background-image: url("../image/mobile-offerings-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 15px 15px;
+    height: 100%;
+  }
+  .mobile-header {
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .az-fabric-component-sub-desc {
+    font-size: 14px;
+    text-align: start;
+  }
+  .az-fabric-component-sub-head {
+    font-size: 18px;
+  }
+  .vl-mobile-margin {
+    margin-bottom: 5px !important;
+  }
+  .vl-fabric-component-heading h2 {
+    font-size: 28px !important;
+  }
+  .mobile-break {
+    display: block;
+  }
+  .az-fabric-component-heading h2 {
+    color: #000000;
+  }
+  .vl-display-text {
+    display: none;
+  }
+  .vl-padding-none {
+    padding: 0px;
+  }
+  .vl-fabric-data-solution {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: none;
+    padding: 0px;
+    background-color: white;
+  }
+  .vl-fabric-data-solution img {
+    padding: 0px;
+  }
+  .az-fabric-features-section {
+    background-image: none;
+  }
+  .vl-mobile-reverse {
+    flex-direction: column-reverse;
+  }
+  .vl-margin-inline {
+    margin-inline: 12px;
+  }
+  .vl-mt {
+    margin-bottom: 20px;
+  }
+  .vl-margin-mobile {
+    margin-top: 22px;
+    margin-inline: 12px;
+  }
+  .vl-text h4 {
+    font-size: 15px;
+    color: #333333;
+    margin-top: 10px;
+    text-align: left;
+  }
+  .vl-section-1 {
+    display: block;
+    padding: 10px 15px;
+  }
+  .vl-img {
+    width: 40px;
+    height: 40px;
+  }
+  .vl-p-tag {
+    font-size: 14px;
+    color: black;
+    margin-top: 5px !important;
+  }
+  .mobile-data {
+    display: inline;
+  }
+
+  .az-marquee__group-fabric .marquee__item-fabric img {
+    width: 130px;
+  }
+
+  .az-fabric-companies-wrapper {
+    background-color: transparent;
+  }
+  .vl-mobile-data {
+    padding-right: 12px !important;
+  }
+  .vl-mobile-margin {
+    margin-top: 12px;
+  }
+  .vl-mobile-padding {
+    padding-bottom: 12px;
+  }
+  .vl-down-arrow {
+    width: 20px;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  .accordion-button:not(.collapsed) .vl-down-arrow {
+    transform: rotate(180deg);
+  }
+  .accordion-button:not(.collapsed) {
+    color: #f79c2e !important;
+  }
+  .vl-start-button {
+    padding: 0px 15px;
+    font-size: 14px;
+    height: 30px;
+    margin-left: 12px;
+  }
+  .accordion-button:not(.collapsed) .az-org-img {
+    display: block;
+  }
+  .accordion-button:not(.collapsed) .az-dark-img {
+    display: none;
+  }
+  .accordion-button.collapsed .az-dark-img {
+    display: block;
+  }
+  .accordion-button.collapsed .az-org-img {
+    display: none;
+  }
+  .mobile-padding {
+    padding-left: 10px;
+  }
+  .vl-display-block {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
